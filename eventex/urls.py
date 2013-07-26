@@ -6,5 +6,5 @@ urlpatterns = patterns('eventex.core.views',
 from django.conf import settings
     urlpatterns += patterns('django.views.static',
 	    url(r'^static/(?P<path>.*)$', 'serve',
-		    {document_root': settings.STATIC_ROOT}),
+		    {'document_root': settings.STATIC_ROOT}),
 )
