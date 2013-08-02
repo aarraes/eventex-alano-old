@@ -1,14 +1,11 @@
 # coding: utf-8
 from django.test import TestCase
 
-class HomepageTest(TestCase):
+
+class SubscribeTest(TestCase):
     def setUp(self):
-        self.resp = self.client.get('/')
+        self.resp = self.client.get('/nscricao/')
 
     def test_get(self):
-        'GET / must return status code 200.'
+        'GET /inscricao/ must return status code 200.'
         self.assertEqual(200, self.resp.status_code)
-
-    def test_template(self):
-        'Homepage must use template index.html'
-        self.assertTemplateUsed(self.resp, 'index.html')
