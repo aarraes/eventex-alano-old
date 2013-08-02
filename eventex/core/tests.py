@@ -9,4 +9,3 @@ class HomepageTest(TestCase):
         self.assertEqual(200, response.status_code)
         self.assertTemplateUsed(response, 'index.html')
 
-				
